@@ -1,0 +1,11 @@
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/easychem-0.6/Makefile.linux src/easychem-0.6/Makefile.linux
+--- origsrc/easychem-0.6/Makefile.linux	2005-05-04 03:10:07.000000000 -0500
++++ src/easychem-0.6/Makefile.linux	2007-06-06 16:00:41.029335000 -0500
+@@ -29,7 +29,6 @@
+ 
+ easychem: postscript/ graph/ $(OBJECTS)
+ 	$(CC) -o easychem $(OBJECTS) $(GTK_LIBS) $(C_FLAGS)
+-	strip easychem
+ 
+ clean: FORCE
+ 	-cd graph; make clean

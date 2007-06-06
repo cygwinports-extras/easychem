@@ -1,0 +1,21 @@
+DESCRIPTION="GTK+ molecular drawing program"
+HOMEPAGE="http://easychem.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake -j1 PREFIX=/usr -f Makefile.linux
+}
+
+src_install() {
+	cd ${B}
+	dobin easychem.exe
+
+	cd ${B}/po
+	for mo in *.mo
+	do
+		insinto /usr/share/locale/${mo%.mo}/LC_MESSAGES
+		newins ${mo} ${PN}.mo
+	done
+}
