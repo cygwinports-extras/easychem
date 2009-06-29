@@ -1,5 +1,5 @@
 category: Gnome Science
-requires: cygwin glib2 gtk2-x11 libintl8 pango
+requires: glib2 gtk2-x11 libintl8 pango
 sdesc: "GTK+ molecular drawing program"
 ldesc: "EasyChem is a program designed to draw chemical molecules,
 written under Linux and using Gtk+ 2."
